@@ -3,7 +3,6 @@ let accessToken: string | null = null;
 type RequestOptions = {
   method: string;
   headers: HeadersInit;
-  mode: RequestMode;
   body?: string;
 }
 
@@ -24,7 +23,6 @@ async function send(url: string, method: string, headers = {}, body?: object) {
   const options: RequestOptions = {
     method,
     headers: finalHeaders,
-    mode: 'cors',
   };
 
   if (body) {
